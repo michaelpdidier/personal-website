@@ -39,3 +39,11 @@
 .read-the-docs {
   color: #888;
 }
+
+.tab-button-container{
+  display: flex;
+}
+
+.editor-container{
+  padding-top: 0.4%;
+}
