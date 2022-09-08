@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './css/App.css'
 import './css/Home.css'
 import CodeEditor from './pages/CodeEditor'
+import Docs from './pages/Docs'
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route path='/CodeEditor' element={<CodeEditor />} />
+          <Route path='/Docs' element={<Docs />} />
         </Routes>
       </Router>
       {/* <div>
