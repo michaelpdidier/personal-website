@@ -1,0 +1,13 @@
+#home-parent {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-child {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+}
