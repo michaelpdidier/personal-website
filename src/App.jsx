@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './css/App.css'
 import './css/Home.css'
 import CodeEditor from './pages/CodeEditor'
+import DragAndDrop from './pages/DragAndDrop'
 import Docs from './pages/Docs'
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route path='/CodeEditor' element={<CodeEditor />} />
+          <Route path='/DragAndDrop' element={<DragAndDrop />} />
           <Route path='/Docs' element={<Docs />} />
         </Routes>
       </Router>

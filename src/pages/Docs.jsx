@@ -13,6 +13,7 @@ const Docs = () => {
                 <p><a href="https://www.notion.so/Creating-A-React-Project-Vite-Create-React-App-7c4dde7e198a4c219e729eb90df126ae">React</a></p>
                 <p><a href="https://www.notion.so/React-Notes-f33a372ca1e346a8845823da525738d9">React- Project Notes/References</a></p>
                 <p><a href="https://www.notion.so/Rescript-6a22bb6d560644e887e72f626cced1b7">Rescript</a></p>
+                <p><a href="https://www.notion.so/CodeMirror-2836d11a002c4666b66db333039a2912">Codemirror</a></p>
             </div>
         </main>
 
