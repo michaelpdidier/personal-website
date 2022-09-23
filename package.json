@@ -9,9 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@codemirror/basic-setup": "^0.20.0",
+    "@codemirror/commands": "^6.1.0",
+    "@codemirror/lang-javascript": "^6.0.2",
+    "@codemirror/state": "^6.1.1",
+    "@codemirror/theme-one-dark": "^6.0.0",
+    "@codemirror/view": "^6.2.3",
     "codemirror": "^6.0.1",
     "react": "^18.2.0",
-    "react-codemirror2": "^7.2.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0"
   },

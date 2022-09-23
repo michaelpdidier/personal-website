@@ -1,63 +1,33 @@
-import React, { useState } from 'react';
+import React, { useRef, useEffect } from "react";
 
-import 'codemirror/lib/codemirror.css';
-import 'codemirror/theme/dracula.css';
-import 'codemirror/theme/material.css';
+import { EditorView, basicSetup } from 'codemirror';
+import { EditorState } from "@codemirror/state"
+import { keymap } from '@codemirror/view';
+import { defaultKeymap, indentWithTab } from '@codemirror/commands';
+import { javascript } from '@codemirror/lang-javascript';
+import { oneDark } from '@codemirror/theme-one-dark';
 
-import 'codemirror/theme/mdn-like.css';
-import 'codemirror/theme/the-matrix.css';
-import 'codemirror/theme/night.css';
+const Editor = () => {
+  const editor = useRef();
 
-import 'codemirror/mode/xml/xml';
-import 'codemirror/mode/javascript/javascript';
-import 'codemirror/mode/css/css';
+  useEffect(() => {
+      const startState = EditorState.create({
+        doc: 'Hello World',
+        extensions: [
+          basicSetup, 
+          keymap.of([defaultKeymap, indentWithTab]), 
+        ],
+      });
 
-import 'codemirror/addon/edit/closebrackets';
-import 'codemirror/addon/edit/closetag';
+      const view = new EditorView({ state: startState, parent: editor.current });
 
-import { Controlled as ControlledEditorComponent } from 'react-codemirror2';
+      return () => {
+        view.destroy();
+      };
 
+  }, []);
 
-
-const Editor = ({ language, value, setEditorState }) => {
-
-  const [theme, setTheme] = useState("dracula")
-  const handleChange = (editor, data, value) => {
-    setEditorState(value);
-  }
-
-  const themeArray = ['dracula', 'material', 'mdn-like', 'the-matrix', 'night']
-
-  return (
-    <div className="editor-container">
-      <div style={{marginBottom: "10px"}}>
-        <label for="cars">Choose a theme: </label>
-        <select name="theme" onChange={(el) => {
-          setTheme(el.target.value)
-        }}>
-          {
-            themeArray.map( theme => (
-              <option value={theme}>{theme}</option>
-            ))
-          }
-        </select>
-      </div>
-      <ControlledEditorComponent
-        onBeforeChange={handleChange}
-        value= {value}
-        className="code-mirror-wrapper"
-        options={{
-          lineWrapping: true,
-          lint: true,
-          mode: language,
-          lineNumbers: true,
-          theme: theme,
-          autoCloseTags: true,
-          autoCloseBrackets: true, 
-        }}
-      />
-    </div>
-  )
+  return <div ref={editor}></div>;
 }
 
-export default Editor
+export default Editor;

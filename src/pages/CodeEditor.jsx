@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../components/Button';
-// import Editor from '../components/Editor';
+import Editor from '../components/Editor';
 
 
 function CodeEditor() {
@@ -18,6 +18,7 @@ function CodeEditor() {
     return (
         <div className="App">
             <p>Welcome to the editor!</p>
+            <Editor />
             <div className="tab-button-container">
                 <Button title="HTML" onClick={() => {
                     onTabClick('html')

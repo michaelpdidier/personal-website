@@ -6,7 +6,7 @@ const Docs = () => {
         <main id='home-parent'>
             <div id='home-child'>
                 <h1>Docs</h1>
-                <p>This is a quick-refrence page for project notes I'm creating as I work. Eventually it will house usage notes for projects</p>                
+                <p>This is a quick-refrence page for notes I'm creating as I work. Eventually it will house usage notes for projects.</p>                
                 <p><a href="https://mousy-wasp-e4f.notion.site/Firebase-Projects-f1fe59b873f541e39c0c390793ede366">Firebase</a></p>
                 <p><a href="https://www.notion.so/Github-563928092b2346b3971915f7b85ad7b3">Github</a></p>
                 <p><a href="https://www.notion.so/Optimize-Images-Video-for-Web-a7d16e33ed454a468842ee2f684849f4">Image/Video optimization for web</a></p>

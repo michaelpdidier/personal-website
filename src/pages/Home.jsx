@@ -15,13 +15,11 @@ const Home = () => {
                 <p><a href="http://didierchocolate.com">Chocolate Website</a></p>
                 <h3>Experiments</h3>
                 <p><Link to={"./CodeEditor"}>Code Editor</Link></p>
-                <p>Drag & Drop</p>
-                <p>Block Library</p>
-                <h3>Github</h3>
-                <p><a href='https://github.com/michaelpdidier/chocolate-website'>Chocolate Website Repo</a></p>
-                <p><a href='https://github.com/michaelpdidier/personal-website'>Personal Website Repo</a></p>
-                <h3>Docs</h3>
+                {/* <p>Drag & Drop</p>
+                <p>Block Library</p> */}
+                <h3>Notes</h3>
                 <p><Link to={"./Docs"}>Docs</Link></p>
+                <p><a href='https://github.com/michaelpdidier?tab=repositories'>github</a></p>
 
             </div>
         </main>
