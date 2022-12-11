@@ -1,33 +1,20 @@
 import React, { useRef, useEffect } from "react";
+import { Sandpack } from "@codesandbox/sandpack-react";
 
-import { EditorView, basicSetup } from 'codemirror';
-import { EditorState } from "@codemirror/state"
-import { keymap } from '@codemirror/view';
-import { defaultKeymap, indentWithTab } from '@codemirror/commands';
-import { javascript } from '@codemirror/lang-javascript';
-import { oneDark } from '@codemirror/theme-one-dark';
+// import { EditorView, basicSetup } from 'codemirror';
+// import { EditorState } from "@codemirror/state"
+// import { keymap} from "@codemirror/view"
+// import { defaultKeymap, indentWithTab } from '@codemirror/commands';
+// import { javascript } from "@codemirror/lang-javascript";
 
-const Editor = () => {
-  const editor = useRef();
+const Editor = ({editor}) => {
 
-  useEffect(() => {
-      const startState = EditorState.create({
-        doc: 'Hello World',
-        extensions: [
-          basicSetup, 
-          keymap.of([defaultKeymap, indentWithTab]), 
-        ],
-      });
+  return <div ref={editor} className="editor-component"></div>;
 
-      const view = new EditorView({ state: startState, parent: editor.current });
-
-      return () => {
-        view.destroy();
-      };
-
-  }, []);
-
-  return <div ref={editor}></div>;
+  // return <div className="editor-component">
+  //   {view}
+  // </div>;
 }
 
 export default Editor;
+

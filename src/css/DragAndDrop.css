@@ -10,6 +10,7 @@
   .dnd-group {
     background-color: #49505e;
     border-radius: 5px;
+    
     padding: .5rem;
   }
   .dnd-item {
@@ -30,7 +31,7 @@
     font-size: 1.2rem;
   }
   .group-title {
-    text-align: left;
+    text-align: center;
     margin-bottom: .5rem;
     font-size: 1.5rem;
     color: white;

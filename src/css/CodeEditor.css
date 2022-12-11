@@ -1,0 +1,13 @@
+.code-editor-page {
+    display: flex;
+}
+
+.editor-component {
+    width: 50vw;
+    height: 89.5vh;
+}
+.ouput-window {
+    width: 50vw;
+    /* height: auto; */
+    border: 3px, solid, black;
+}
